@@ -74,7 +74,7 @@ WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= false
 
 # SELinux
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-include device/sony/sepolicy/sepolicy.mk
+#include device/sony/sepolicy/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # Device manifest: What HALs the device provides

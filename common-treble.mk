@@ -106,8 +106,8 @@ endif
 ifeq ($(PRODUCT_USES_PIXEL_USB_HAL),true)
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service.moto-common
-else
-include $(QCOM_COMMON_PATH)/vendor/usb/qti-usb.mk
+#else
+#include $(QCOM_COMMON_PATH)/vendor/usb/qti-usb.mk
 endif
 
 # Only define bootctrl HAL availability on AB platforms:
@@ -119,37 +119,37 @@ PRODUCT_PACKAGES += \
 endif
 
 # Proprietary Blobs
-QCOM_COMMON_PATH := device/qcom/common
+#QCOM_COMMON_PATH := device/qcom/common
 # System
-include $(QCOM_COMMON_PATH)/system/audio/qti-audio.mk
-include $(QCOM_COMMON_PATH)/system/av/qti-av.mk
-include $(QCOM_COMMON_PATH)/system/display/qti-display.mk
-include $(QCOM_COMMON_PATH)/system/gps/qti-gps.mk
-include $(QCOM_COMMON_PATH)/system/overlay/qti-overlay.mk
-ifneq ($(PRODUCT_USES_PIXEL_POWER_HAL),true)
-include $(QCOM_COMMON_PATH)/system/perf/qti-perf.mk
-endif
+#include $(QCOM_COMMON_PATH)/system/audio/qti-audio.mk
+#include $(QCOM_COMMON_PATH)/system/av/qti-av.mk
+#include $(QCOM_COMMON_PATH)/system/display/qti-display.mk
+#include $(QCOM_COMMON_PATH)/system/gps/qti-gps.mk
+#include $(QCOM_COMMON_PATH)/system/overlay/qti-overlay.mk
+#ifneq ($(PRODUCT_USES_PIXEL_POWER_HAL),true)
+#include $(QCOM_COMMON_PATH)/system/perf/qti-perf.mk
+#endif
 # Vendor
-include $(QCOM_COMMON_PATH)/vendor/adreno/qti-adreno.mk
-include $(QCOM_COMMON_PATH)/vendor/charging/qti-charging.mk
-include $(QCOM_COMMON_PATH)/vendor/drm/qti-drm.mk
-include $(QCOM_COMMON_PATH)/vendor/dsprpcd/qti-dsprpcd.mk
-include $(QCOM_COMMON_PATH)/vendor/keymaster/qti-keymaster.mk
-ifeq ($(KERNEL_VERSION),5.4)
-include $(QCOM_COMMON_PATH)/vendor/media/qti-media.mk
-else
-include $(QCOM_COMMON_PATH)/vendor/media-legacy/qti-media-legacy.mk
-endif
-ifneq ($(PRODUCT_USES_PIXEL_POWER_HAL),true)
-include $(QCOM_COMMON_PATH)/vendor/perf/qti-perf.mk
-endif
-ifneq ($(KERNEL_VERSION),5.4)
-include $(QCOM_COMMON_PATH)/vendor/qseecomd-legacy/qti-qseecomd-legacy.mk
-else
-include $(QCOM_COMMON_PATH)/vendor/qseecomd/qti-qseecomd.mk
-endif
-include $(QCOM_COMMON_PATH)/vendor/wlan/qti-wlan.mk
+#include $(QCOM_COMMON_PATH)/vendor/adreno/qti-adreno.mk
+#include $(QCOM_COMMON_PATH)/vendor/charging/qti-charging.mk
+#include $(QCOM_COMMON_PATH)/vendor/drm/qti-drm.mk
+#include $(QCOM_COMMON_PATH)/vendor/dsprpcd/qti-dsprpcd.mk
+#include $(QCOM_COMMON_PATH)/vendor/keymaster/qti-keymaster.mk
+#ifeq ($(KERNEL_VERSION),5.4)
+#include $(QCOM_COMMON_PATH)/vendor/media/qti-media.mk
+#else
+#include $(QCOM_COMMON_PATH)/vendor/media-legacy/qti-media-legacy.mk
+#endif
+#ifneq ($(PRODUCT_USES_PIXEL_POWER_HAL),true)
+#include $(QCOM_COMMON_PATH)/vendor/perf/qti-perf.mk
+#endif
+#ifneq ($(KERNEL_VERSION),5.4)
+#include $(QCOM_COMMON_PATH)/vendor/qseecomd-legacy/qti-qseecomd-legacy.mk
+#else
+#include $(QCOM_COMMON_PATH)/vendor/qseecomd/qti-qseecomd.mk
+#endif
+#include $(QCOM_COMMON_PATH)/vendor/wlan/qti-wlan.mk
 
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/qcom/common/vendor/dsprpcd \
-    vendor/qcom/common/vendor/perf
+#PRODUCT_SOONG_NAMESPACES += \
+#    vendor/qcom/common/vendor/dsprpcd \
+#    vendor/qcom/common/vendor/perf
